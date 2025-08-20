@@ -1,0 +1,15 @@
+lidar_camera_tf:
+  ros__parameters:
+    parent_frame: "velodyne"
+    child_frame: "camera_front_up_frame"
+    translation: [-0.40, -0.003556, 0.763066]
+    rotation: [-0.495625, 0.503051, -0.508326, 0.492850] # x, y, z, w
+# translation 단위 : 미터(m)
+# 의미: 라이다 프레임 (velodyne)을 기준으로 카메라 프레임
+# (camera_front_down_frame)이 x, y, z 방향으로
+# 각각 얼마나 떨어져 있는지를 나타냄.
+# x = -0.0037 m -> 좌우 // y = 0.3370 m -> 전후 // z = 0.4387 m -> 상하
+
+# rotation 단위 : 없음(쿼터니언)
+# 의미: 라이다 프레임에서 카메라 프레임으로의 회전 방향을 나타냄.
+# 구성: [qx, qy, qz, qw] 순서로 ROS2에서 사용되는 표준 쿼터니언 표현 방식임.

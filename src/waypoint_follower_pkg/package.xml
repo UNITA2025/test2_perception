@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>waypoint_follower_pkg</name>
+  <version>0.0.1</version>
+  <description>Waypoint follower nodes (Python, rclpy)</description>
+  <maintainer email="gyun@todo.todo">gyun</maintainer>
+  <license>MIT</license> <!-- TODO 부분 실제 라이선스로 교체 -->
+
+  <!-- 실행 시 필요한 것들: ament_python이면 exec_depend로 명시 -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>interfaces_pkg</exec_depend>
+
+  <!-- 런치 파일을 쓰면 추가 (파이썬 런치) -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- 테스트 (있으면 유지) -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,7 @@
+# TODO : 아직 작업되지 않음 외부파라미터 세팅 필욧
+lidar_camera_tf:
+  ros__parameters:
+    parent_frame: "velodyne"
+    child_frame: "camera_left_frame"
+    translation: [-0.90, 0.241359, 0.697326]
+    rotation:    [-0.738472, 0.414699, -0.265391, 0.460708]   # qx, qy, qz, qw
