@@ -328,17 +328,23 @@ class FusionNode(Node):
             except Exception:
                 continue
 
-            # HSV 기반 색 판별 (YOLO class_name이 cone인 경우)
+            # HSV 
             if det.class_name.lower() == "cone":
                 color_name, rgb = detect_cone_color(latest_img, bb)
                 out_points_cone.append((x, y, z, *rgb))
+            elif det.class_name.lower() == "cone_Y":
+                rgb = (255, 255, 0)
+                out_points_cone.append((x, y, z, *rgb))
+            elif det.class_name.lower() == "cone_B":
+                rgb = (0, 0, 255)
+                out_points_cone.append((x, y, z, *rgb))
             elif det.class_name.lower() == "drum":
-                # 드럼에 대해 색상 임의 지정 (노란색)
                 rgb = (255, 0, 0)
                 out_points_drum.append((x, y, z, *rgb))
             else:
-                # cone, drum 아니면 드럼 그룹에 넣거나 무시 가능 (여기선 무시)
+                # cone, drum ì•„ë‹ˆë©´ ë“œëŸ¼ ê·¸ë£¹ì— ë„£ê±°ë‚˜ ë¬´ì‹œ ê°€ëŠ¥ (ì—¬ê¸°ì„  ë¬´ì‹œ)
                 continue
+
 
             # Marker 생성 (cone과 drum 모두 같은 마커 토픽에 발행)
             m = Marker()

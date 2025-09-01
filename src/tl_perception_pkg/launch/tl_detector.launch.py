@@ -9,7 +9,7 @@ def generate_launch_description():
             name="tl_detector",
             parameters=[{
                 "image_topic": "camera_front_up/image_raw",       # 퍼블리셔 토픽과 동일
-                "model_path":  "traffic_light.pt",
+                "model_path":  "traffic_light_test.pt",
                 "conf_th":     0.3
             }]
         )

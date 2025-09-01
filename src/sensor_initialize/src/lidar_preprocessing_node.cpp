@@ -42,8 +42,8 @@ private:
         float min_z, max_z;
     };
 
-    ROI roi_left_{-1.0f, 5.5f, 0.0f, 3.0f, -0.5f, 1.0f};
-    ROI roi_right_{-1.0f, 5.5f, -3.0f, 0.0f, -0.5f, 1.0f};
+    ROI roi_left_{-1.0f, 5.5f,  -1.0f, 5.5f, -0.4f, 1.0f};
+    ROI roi_right_{-1.0f, 5.5f,  -5.5f, 1.0f,-0.4f, 1.0f};
     ROI roi_down_{-0.5f, 7.0f, -4.0f, 4.0f, -0.4f, 1.0f};
 
     void callbackLeft(const sensor_msgs::msg::PointCloud2::SharedPtr msg)  { process(msg, roi_left_, pub_left_); }

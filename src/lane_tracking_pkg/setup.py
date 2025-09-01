@@ -27,7 +27,10 @@ setup(
             'lane_info_extractor_node = lane_tracking_pkg.lane_info_extractor_node:main',
             'path_visualizer_node = lane_tracking_pkg.path_visualizer_node:main',
             'yolov8_node = lane_tracking_pkg.yolov8_node:main',
-            'yolov8_visualizer_node = lane_tracking_pkg.yolov8_visualizer_node:main'
+            'yolov8_visualizer_node = lane_tracking_pkg.yolov8_visualizer_node:main',
+            'lane_path_visualizer_node = lane_tracking_pkg.lane_path_visualizer_node:main',
+            'test_node = lane_tracking_pkg.test_node:main',
+            'erp_motion_planner_node = lane_tracking_pkg.erp_motion_planner_node:main', 
         ],
     }
 )
