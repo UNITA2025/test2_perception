@@ -16,7 +16,7 @@ def generate_launch_description():
         if name == 'front_up':
             continue   # ✅ front_up 전용 모델
         else:
-            model_file = 'best.pt'       # ✅ 나머지 카메라 공통 모델
+            model_file = 'weights.pt'       # ✅ 나머지 카메라 공통 모델
 
         yolo_node = Node(
             package='perception_yolov8_pkg',
