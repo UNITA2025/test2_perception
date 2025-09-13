@@ -27,6 +27,9 @@ setup(
             'test_visualizer = test_pkg.test_visualizer:main',
             'test_planner = test_pkg.test_planner:main',
             'test_follower = test_pkg.test_follower:main',
+            'lane_path_planner = test_pkg.lane_path_planner:main',
+            'fusion_buffer_node = test_pkg.fusion_buffer_node:main',
+            'odom2tf = test_pkg.odom2tf:main', 
         ],
     },
 )
